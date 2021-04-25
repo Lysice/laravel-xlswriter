@@ -1,0 +1,25 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyFullModelClass;
+use Lysice\XlsWriter\Interfaces\FromCollection;
+
+class DummyClass implements FromCollection
+{
+    /**
+     * @return \Illuminate\Support\Collection
+     */
+    public function collection()
+    {
+        return DummyModelClass::all();
+    }
+
+    /**
+     * @return array
+     */
+    public function headers() : array
+    {
+        return [];
+    }
+}

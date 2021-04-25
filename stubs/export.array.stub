@@ -1,0 +1,24 @@
+<?php
+
+namespace DummyNamespace;
+
+use Lysice\XlsWriter\Interfaces\FromArray;
+
+class DummyClass implements FromArray
+{
+    /**
+     * @return array
+     */
+    public function array() : array
+    {
+        return [];
+    }
+
+    /**
+     * @return array
+     */
+    public function headers() : array
+    {
+        return [];
+    }
+}

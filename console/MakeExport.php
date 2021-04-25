@@ -1,0 +1,90 @@
+<?php
+
+namespace Lysice\XlsWriter\Console;
+
+use Illuminate\Console\GeneratorCommand;
+use Symfony\Component\Console\Input\InputOption;
+
+class ExportMakeCommand extends GeneratorCommand
+{
+    use WithModelStub;
+
+    /**
+     * The console command name.
+     *
+     * @var string
+     */
+    protected $name = 'make:export';
+
+    /**
+     * The console command description.
+     *
+     * @var string
+     */
+    protected $description = 'Create a new export class';
+
+    /**
+     * The type of class being generated.
+     *
+     * @var string
+     */
+    protected $type = 'Export';
+
+    /**
+     * Get the stub file for the generator.
+     *
+     * @return string
+     */
+    protected function getStub()
+    {
+        if ($this->option('array')) {
+            return $this->copyFrom('/stubs/export.array.stub');
+        } elseif ($this->option('model')) {
+            return $this->copyFrom('/stubs/export.model.stub');
+        } elseif ($this->option('query')) {
+            return $this->copyFrom('/stubs/export.query.stub');
+        }
+
+        return $this->copyFrom('/stubs/export.collection.stub');
+    }
+
+    private function copyFrom($stub)
+    {
+        return file_exists($customPath = $this->laravel->basePath(trim($stub, '/')))
+            ? $customPath
+            : __DIR__ . $stub;
+    }
+
+    /**
+     * Get the default namespace for the class.
+     *
+     * @param  string $rootNamespace
+     *
+     * @return string
+     */
+    protected function getDefaultNamespace($rootNamespace)
+    {
+        return $rootNamespace . '\Exports';
+    }
+
+    /**
+     * Build the class with the given name.
+     * Remove the base controller import if we are already in base namespace.
+     *
+     * @param  string $name
+     *
+     * @return string
+     */
+    protected function buildClass($name)
+    {
+        $replace = [];
+        if ($this->option('model')) {
+            $replace = $this->buildModelReplacements($replace);
+        }
+
+        return str_replace(
+            array_keys($replace), array_values($replace), parent::buildClass($name)
+        );
+    }
+
+}

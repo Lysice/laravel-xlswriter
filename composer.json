@@ -1,0 +1,25 @@
+{
+    "name": "lysice/laravel-xlswriter",
+    "description": "an excel processor for laravel based on php-xlswriter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lysice",
+            "email": "snowist@126.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Lysice\\XlsWriter\\": "src/",
+            "Lysice\\XlsWriter\\Traits\\" : "traits/",
+            "Lysice\\XlsWriter\\Exceptions\\" : "Exceptions/",
+            "files": [
+                "src/helpers.php"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "viest/php-ext-xlswriter-ide-helper": "dev-master"
+    }
+}

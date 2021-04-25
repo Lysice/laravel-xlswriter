@@ -1,0 +1,24 @@
+<?php
+
+namespace DummyNamespace;
+
+use Lysice\XlsWriter\Interfaces\FromQuery;
+
+class DummyClass implements FromQuery
+{
+    /**
+     * @return \Illuminate\Database\Query\Builder
+     */
+    public function query()
+    {
+
+    }
+
+    /**
+     * @return array
+     */
+    public function headers() : array
+    {
+        return [];
+    }
+}

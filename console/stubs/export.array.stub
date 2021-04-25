@@ -1,0 +1,17 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyFullModelClass;
+use Lysice\XlsWriter\Traits\FromArray;
+
+class DummyClass implements FromArray
+{
+    /**
+    * @return array
+    */
+    public function collection()
+    {
+        return DummyModelClass::all();
+    }
+}
