@@ -13,13 +13,10 @@
             "Lysice\\XlsWriter\\": "src/",
             "Lysice\\XlsWriter\\Traits\\" : "traits/",
             "Lysice\\XlsWriter\\Exceptions\\" : "Exceptions/",
-            "files": [
-                "src/helpers.php"
-            ]
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
-    "minimum-stability": "dev",
-    "require": {
-        "viest/php-ext-xlswriter-ide-helper": "dev-master"
-    }
+    "minimum-stability": "dev"
 }
