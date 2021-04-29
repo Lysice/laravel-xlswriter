@@ -12,7 +12,7 @@
         "psr-4": {
             "Lysice\\XlsWriter\\": "src/",
             "Lysice\\XlsWriter\\Traits\\" : "traits/",
-            "Lysice\\XlsWriter\\Exceptions\\" : "Exceptions/",
+            "Lysice\\XlsWriter\\Exceptions\\" : "Exceptions/"
         },
         "files": [
             "src/helpers.php"
