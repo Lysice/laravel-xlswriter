@@ -12,7 +12,14 @@
         "psr-4": {
             "Lysice\\XlsWriter\\": "src/",
             "Lysice\\XlsWriter\\Traits\\" : "traits/",
-            "Lysice\\XlsWriter\\Exceptions\\" : "Exceptions/"
+            "Lysice\\XlsWriter\\Exceptions\\" : "Exceptions/",
+            "Lysice\\XlsWriter\\Commands\\" : "commands/",
+            "Lysice\\XlsWriter\\Facade\\" : "Facades/",
+            "Lysice\\XlsWriter\\Interfaces\\" : "Interfaces/",
+            "Lysice\\XlsWriter\\FileSystem\\" : "src/FileSystem",
+            "Lysice\\XlsWriter\\Structure\\" : "src/Structure",
+            "Lysice\\XlsWriter\\Supports\\Chart\\" : "src/Supports/Chart",
+            "Lysice\\XlsWriter\\Supports\\Format\\" : "src/Supports/Format"
         },
         "files": [
             "src/helpers.php"
