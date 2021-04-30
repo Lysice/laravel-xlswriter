@@ -455,29 +455,29 @@ implements WithColumnFormat
  }
 ```
 `ColumnFormat`方法返回`ColumnFormat`对象的数组。
-`ColumnFormat对象` 继承自`DefaultFormat`, 所以可以支持所有格式。
-当前支持5种格式,定义在`ColumnFormat` 中:
+`ColumnFormat对象` 继承自`DefaultFormat`, 所以可以支持所有单元格样式。
+当前支持5种单元格的类型,定义在`ColumnFormat` 中:
 ```
 class ColumnFormat extends DefaultFormat {
 	public $cellTypes = [ 
-		CellConstants::CELL_TYPE_TEXT, // 文本格式
-		CellConstants::CELL_TYPE_DATE, // 日期格式 
-		CellConstants::CELL_TYPE_FORMULA, // 公式格式
-		CellConstants::CELL_TYPE_IMAGE, // 图片格式
-		CellConstants::CELL_TYPE_URL, // url格式
+		CellConstants::CELL_TYPE_TEXT, // 文本类型
+		CellConstants::CELL_TYPE_DATE, // 日期类型 
+		CellConstants::CELL_TYPE_FORMULA, // 公式类型
+		CellConstants::CELL_TYPE_IMAGE, // 图片类型
+		CellConstants::CELL_TYPE_URL, // url类型
  	];
 ......
 }
 ```
 注意 要设置单元格格式时，若未指定 `CellType` 则会默认按照 `CELL_TYPE_TEXT` 文本格式来处理。
-- 1.文本格式 
+- 1.文本类型
 ```
 $formatOne = ColumnFormat::create()
 	->setCellType(CellConstants::CELL_TYPE_TEXT)
 	->border(12) 
 	->background(\Lysice\XlsWriter\Supports\Constants::COLOR_MAGENTA);
  ```
-- 2.日期格式 可以设置选项 日期格式,通过`setOptions`来实现。如下代码
+- 2.日期类型 可以设置选项 日期类型,通过`setOptions`来实现。如下代码
 `xlswriter`官方`1.3.7`源码中为日期设置格式有bug 因此日期单元格的格式在`laravel-xlswriter` 1.0的版本中没有适配。
 目前该问题已经在 main 分支中修改完毕。1.3.8发布的时候 本扩展会修复这个问题。
 ```
@@ -487,21 +487,21 @@ $formatTwo = ColumnFormat::create()
 	->underline( \Lysice\XlsWriter\Supports\Constants::UNDERLINE_SINGLE) 
 	->wrap();
  ```
-- 3.公式格式
+- 3.公式类型
 ```
 $formatThree = ColumnFormat::create()
 	->setCellType(CellConstants::CELL_TYPE_FORMULA) 
 	->italic()
 	->fontSize(12);
  ```
-- 4.图片格式, 可以设置缩放比例。通过`setOptions`来实现。如下代码
+- 4.图片类型, 可以设置缩放比例。通过`setOptions`来实现。如下代码
 ```
 $formatFour = ColumnFormat::create()
 	->setOptions([ 'widthScale' => 1.1, 'heightScale' => 1.1 ]) 
 	->setCellType(CellConstants::CELL_TYPE_IMAGE) 
 	->border(1);
  ```
-- 5.URL格式 可以设置文本与提示 ,由于每行的提示文本 `urlTooltip` `urlText`不一样，因此该数据只能在要导入的数据中定义。
+- 5.URL类型 可以设置文本与提示 ,由于每行的提示文本 `urlTooltip` `urlText`不一样，因此该数据只能在要导入的数据中定义。
 如下数据定义:
 ```
 return [
