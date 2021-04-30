@@ -1,6 +1,6 @@
 {
     "name": "lysice/laravel-xlswriter",
-    "description": "an excel processor for laravel based on php-xlswriter",
+    "description": "an excel export tool for laravel based on php-xlswriter",
     "license": "MIT",
     "authors": [
         {
