@@ -7,6 +7,6 @@ class Writer extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \Lysice\XlsWriter\Writer::class;
+        return \Lysice\XlsWriter\Excel::class;
     }
 }
