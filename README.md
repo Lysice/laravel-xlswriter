@@ -1,9 +1,10 @@
 ## Laravel-xlswriter 一款基于xlswriter的laravel扩展包
+php-xlswriter是一款高性能的excel读写扩展，laravel-xlswriter基于该扩展做了封装，旨在提供一个便于使用的xlswriter的laravel工具包。
 [PHP扩展Xlswriter文档](https://xlswriter-docs.viest.me/zh-cn)
 
-如果本扩展帮助到了你 欢迎star。
+#### 如果本扩展帮助到了你 欢迎star。
 
-如果本扩展有任何问题或有其他想法 欢迎提 issue与pull request。
+####如果本扩展有任何问题或有其他想法 欢迎提 issue与pull request。
 ### XlsWriter扩展介绍
 `XlsWriter`是`viest`开发的一款PHP扩展，目前github的 star 数已达到1.6k。开发语言为C语言。以下是官方文档:
 ```
@@ -52,6 +53,13 @@ composer require lysice/laravel-xlswriter
         ...
         \Lysice\XlsWriter\XlsWriterServiceProvider::class
     ],
+```
+发布`Facade` 将`Excel`加入到app.php中:
+```
+    'aliases' => [
+            ...
+            'Excel' => \Lysice\XlsWriter\Facade\Writer::class
+        ],
 ```
 发布`xlswriter.php`配置文件:
 ```
