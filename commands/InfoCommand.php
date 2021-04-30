@@ -16,12 +16,12 @@ class InfoCommand extends Command
     /**
      * @var string
      */
-    protected $version = 'dev';
+    protected $version = '1.0';
 
     /**
      * @var string
      */
-    protected $docsUrl = '';
+    protected $docsUrl = 'https://github.com/Lysice/laravel-xlswriter';
     /**
      * The console command description.
      *
