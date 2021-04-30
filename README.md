@@ -116,7 +116,8 @@ XlsWriter extension status:
 
 - Collection
 ```
- php artisan xls:export XXXXExport collection```
+ php artisan xls:export XXXXExport collection
+```
 
 #### 2.导出array
 ```
