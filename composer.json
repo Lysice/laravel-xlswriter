@@ -25,5 +25,8 @@
             "src/helpers.php"
         ]
     },
-    "minimum-stability": "dev"
+    "require": {
+        "php": ">=7.0"
+    },
+    "minimum-stability": "stable"
 }
