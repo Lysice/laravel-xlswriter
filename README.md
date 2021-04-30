@@ -478,6 +478,8 @@ $formatOne = ColumnFormat::create()
 	->background(\Lysice\XlsWriter\Supports\Constants::COLOR_MAGENTA);
  ```
 - 2.日期格式 可以设置选项 日期格式,通过`setOptions`来实现。如下代码
+`xlswriter`官方`1.3.7`源码中为日期设置格式有bug 因此日期单元格的格式在`laravel-xlswriter` 1.0的版本中没有适配。
+目前该问题已经在 main 分支中修改完毕。1.3.8发布的时候 本扩展会修复这个问题。
 ```
 $formatTwo = ColumnFormat::create()
 	->setOptions(['dateFormat' => "mm/dd/yy"])
