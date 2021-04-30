@@ -258,7 +258,8 @@ public function charts()
 文档可以分别为设置默认的单元格样式。
 - 1.约定契约
 ```
- implements WithDefaultFormat```
+ implements WithDefaultFormat
+```
 - 2.添加样式
 ```
  /** 
@@ -424,7 +425,7 @@ const PATTERN_GRAY_0625 = \Vtiful\Kernel\Format::PATTERN_GRAY_0625;
 ```
 implements WithColumnFormat
 ```
-```
+
 - 2.实现接口方法 `columnFormats`
 ```
 /**
@@ -452,7 +453,7 @@ implements WithColumnFormat
  	->border(1); 
  	return [$formatOne, $formatTwo, $formatThree, $formatFour, $formatFive]; 
  }
- ```
+```
 `ColumnFormat`方法返回`ColumnFormat`对象的数组。
 `ColumnFormat对象` 继承自`DefaultFormat`, 所以可以支持所有格式。
 当前支持5种格式,定义在`ColumnFormat` 中:
