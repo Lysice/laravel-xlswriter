@@ -121,6 +121,19 @@ class Excel implements ExportInterface, ImportInterface
 //        if ($export instanceof ShouldQueue) {
 //            return $this->queue($export, $filePath, $diskName, $writerType, $diskOptions);
 //        }
+        $extensions = explode('.', $filePath);
+        if (count($extensions) != 2){
+            throw new \InvalidArgumentException('the name for document is not a valid name! for example:demo.xlsx');
+        }
+        if (!key_exists($extensions[1], $this->config['extension'])) {
+            throw new \InvalidArgumentException('extension doesnot support!');
+        }
+        if (empty($diskName)) {
+            throw new \InvalidArgumentException('the name for document must be passed, null given');
+        }
+        if (empty($writerType)) {
+            throw new \InvalidArgumentException('the export type for document must be passed, null given');
+        }
 
         $temporaryFile = $this->export($export, $filePath, $writerType);
 
