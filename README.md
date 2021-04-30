@@ -168,7 +168,6 @@ class UserExport implements FromArray
         return [];
     }
 ```
-##### 2.2 
 
 #### 3.直接下载
 使用`Excel`的Facade:
