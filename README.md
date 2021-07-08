@@ -1,4 +1,9 @@
 ## Laravel-xlswriter 一款基于xlswriter的laravel扩展包
+[![Latest Stable Version](https://poser.pugx.org/Lysice/laravel-xlswriter/v/stable)](https://packagist.org/packages/Lysice/laravel-xlswriter)
+[![Total Downloads](https://poser.pugx.org/Lysice/laravel-xlswriter/downloads)](https://packagist.org/packages/Lysice/laravel-xlswriter)
+[![Latest Unstable Version](https://poser.pugx.org/Lysice/laravel-xlswriter/v/unstable)](https://packagist.org/packages/Lysice/laravel-xlswriter)
+[![License](https://poser.pugx.org/Lysice/laravel-xlswriter/license)](https://packagist.org/packages/Lysice/laravel-xlswriter)
+
 php-xlswriter是一款高性能的excel读写扩展，laravel-xlswriter基于该扩展做了封装，旨在提供一个便于使用的xlswriter的laravel工具包。
 目前laravel-xlswriter支持导出 读取功能会在后续版本中加入。
 
