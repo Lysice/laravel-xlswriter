@@ -156,7 +156,7 @@ class XlsWriter {
         } else if ($export instanceof FromCollection) {
             $result = [];
             foreach ($export->collection()->toArray() as $collections) {
-                $result[] = array_merge(array_values($collections), $result);
+                $result[] = array_merge(array_values((array)$collections), $result);
             }
             return $result;
         } else if ($export instanceof FromQuery) {
