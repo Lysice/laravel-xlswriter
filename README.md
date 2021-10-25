@@ -8,11 +8,12 @@ php-xlswriter是一款高性能的excel读写扩展，laravel-xlswriter基于该
 目前laravel-xlswriter支持导出 读取功能会在后续版本中加入。
 
 
-[PHP扩展Xlswriter文档](https://xlswriter-docs.viest.me/zh-cn)
+[Xlswriter文档](https://xlswriter-docs.viest.me/zh-cn)
 
 #### 如果本扩展帮助到了你 欢迎star。
 
 #### 如果本扩展有任何问题或有其他想法 欢迎提 issue与pull request。
+
 ### XlsWriter扩展介绍
 `XlsWriter`是`viest`开发的一款PHP扩展，目前github的 star 数已达到1.6k。开发语言为C语言。以下是官方文档描述:
 ```
